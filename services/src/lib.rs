@@ -5,6 +5,9 @@
 
 extern crate alloc;
 
+/// The ring page layout, under the name the user image (and a board's own driver) has always used for it.
+pub use metallium_net_ring as netring;
+
 pub mod httpc;
 pub mod netd;
 pub mod netdrv;
