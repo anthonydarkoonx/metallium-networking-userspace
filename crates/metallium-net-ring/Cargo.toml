@@ -1,0 +1,9 @@
+[package]
+name = "metallium-net-ring"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "The ring page the Metallium-OS network driver and the network service share, and the protocol constant between them (no_std, no dependencies)"
+
+[lints]
+workspace = true

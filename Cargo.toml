@@ -1,0 +1,20 @@
+[workspace]
+resolver = "2"
+members = ["crates/*", "services"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0 OR MIT"
+
+# host tests run property tests: optimise them
+[profile.test]
+opt-level = 2
+
+# Hardening lints (the same as the OS repository): every operation inside an `unsafe fn` needs its own `unsafe` block, and every
+# `unsafe` block a `// SAFETY:` comment.
+[workspace.lints.rust]
+unsafe_op_in_unsafe_fn = "deny"
+
+[workspace.lints.clippy]
+undocumented_unsafe_blocks = "deny"

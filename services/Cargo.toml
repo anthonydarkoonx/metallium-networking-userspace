@@ -1,0 +1,15 @@
+[package]
+name = "metallium-net-services"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "The Metallium-OS network service (netd, role 19), the virtio-net driver (netdrv, role 18) and the plain HTTP client, as ordinary user-space code the OS's user image links in"
+
+[dependencies]
+metallium-net = { path = "../crates/metallium-net" }
+metallium-net-ring = { path = "../crates/metallium-net-ring" }
+# the OS repository, checked out next to this one (see README.md)
+metallium-driver-rt = { path = "../../metallium-os/libs/metallium-driver-rt" }
+
+[lints]
+workspace = true
